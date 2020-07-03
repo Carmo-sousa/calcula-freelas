@@ -181,3 +181,28 @@
         width: 100%;
     }
 }
+
+.modal {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2000;
+  background-color: rgba(0, 0, 0, 0.80);
+}
+
+.modal-content {
+  width: 350px;
+  height: 200px;
+  display: flex;
+  color: #FFFFFFFF;
+  font-family: "Arimo", sans-serif;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: #333E4A;
+}
