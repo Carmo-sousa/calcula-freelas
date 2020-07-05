@@ -26,30 +26,30 @@
           <div class="content-form">
             <form action="#" class="form">
               <div class="custom-input">
-                <input type="text" name="name" required autocomplete="off">
+                <input type="text" name="valorTotalProjeto" id="valorTotalProjeto" required autocomplete="off">
                 <label for="name" class="label-name">
                     <span class="content-name">Valor total do projeto</span>
                 </label>
               </div>
 
               <div class="custom-input">
-                <input type="text" name="name" required autocomplete="off">
+                <input type="text" name="horaDia" id="horaDia" required autocomplete="off">
                 <label for="name" class="label-name">
                     <span class="content-name">Horas trabalhadas por dia</span>
                 </label>
               </div>
 
               <div class="custom-input">
-                <input type="text" name="name" required autocomplete="off">
+                <input type="text" name="diasTrabalhados" id="diasTrabalhados" required autocomplete="off">
                 <label for="name" class="label-name">
                     <span class="content-name">Dias trabalhados na semana</span>
                 </label>
               </div>
 
               <div class="custom-input">
-                <input type="text" name="name" required autocomplete="off">
+                <input type="text" name="diasFeriasProjeto" id="diasFeriasProjeto" required autocomplete="off">
                 <label for="name" class="label-name">
-                    <span class="content-name">Dias de fárias pelo projeto</span>
+                    <span class="content-name">Dias de férias pelo projeto</span>
                 </label>
               </div>
               <button class="btn-calcular">Calcular</button>
@@ -60,11 +60,14 @@
       <footer class="footer">
       </footer>
     </div>
-    <script src="./src/js/main.js"></script>
     <div class="modal">
       <div class="modal-content">
-        <h1>Valor hora: <span>R$ 40,00</span></h1>
+        <div class="btn-modal-close">X</div>
+        <h1>Valor hora: <span class="valor-hora">R$ 00,00</span></h1>
       </div>
     </div>
+
+    <script src="./src/js/main.js"></script>
+    <script src="./src/js/modal.js"></script>
   </body>
 </html>
