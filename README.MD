@@ -1,6 +1,6 @@
 # Projeto 001 - Calculadora de hora p/ Freelas (1/3)
 
-[Site](https://carmo-sousa.github.io/he4rtlabs-challenges-01/)
+[Calcula Freela](https://carmo-sousa.github.io/he4rtlabs-challenges-01/)
 
 Uma calculadora que irá te mostrar o valor da sua hora perante o freelance cotado.
 

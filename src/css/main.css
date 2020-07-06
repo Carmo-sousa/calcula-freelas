@@ -167,6 +167,15 @@
 .footer {
   background-color: #333e4a;
   height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-icons i {
+  font-size: 30px;
+  color: #FFFFFF;
+  margin: 5px;
 }
 
 /* mobile */
