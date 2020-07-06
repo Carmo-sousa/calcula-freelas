@@ -1,12 +1,12 @@
 const btnCalc = document.querySelector('.btn-calcular');
 const elValorHora = document.querySelector('.valor-hora');
 
-// valorHora = (valorProjeto / (diasEfetivos * 4 * horasDiarias) ) + ( ( diasFerias * diasEfetivos * horasDiarias ) )
+var elvalorTotalProjeto = document.querySelector('#valorTotalProjeto');
 
 btnCalc.addEventListener('click', (e) => {
   e.preventDefault();
   
-  var elvalorTotalProjeto = document.querySelector('#valorTotalProjeto');
+  let elvalorTotalProjeto = document.querySelector('#valorTotalProjeto');
   var elhoraDia = document.querySelector('#horaDia');
   var eldiasTrabalhados = document.querySelector('#diasTrabalhados');
   var eldiasFeriasProjeto = document.querySelector('#diasFeriasProjeto');
@@ -18,12 +18,21 @@ btnCalc.addEventListener('click', (e) => {
 
   modal.classList.add('active');
 
-  let valorHora = (valorTotalProjeto / (diasTrabalhados * 4 * horaDia)) + ((diasFeriasProjeto * diasTrabalhados * horaDia));
-
+  
   elvalorTotalProjeto.value = '';
   elhoraDia.value = '';
   eldiasTrabalhados.value = '';
   eldiasFeriasProjeto.value = '';
 
+  let valorHora = calcularHora(valorTotalProjeto, horaDia, diasTrabalhados, diasFeriasProjeto);
+
   elValorHora.innerHTML = `R$ ${valorHora.toFixed(2)}`;
+});
+
+function calcularHora(valorProjeto, horasDia, diasTrabalhados, feriasProjeto){
+  return (valorProjeto / (diasTrabalhados * 4 * horasDia)) + ((feriasProjeto * diasTrabalhados * horaDia))
+}
+
+elvalorTotalProjeto.addEventListener('input', function () {
+  console.log(this.value);
 });
